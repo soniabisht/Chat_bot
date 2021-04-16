@@ -1,0 +1,61 @@
+session_config:
+    session_expiration_time: 60.0
+    carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- assistance
+- offers
+- fetch_account_details
+- give_information
+- goodbye
+
+
+entities:
+- mobile
+- email
+- accountnumber
+- person
+
+slots:
+    mobile:
+        type: text
+    email:
+        type: text
+    accountnumber:
+        type: text
+    person:
+        type: text
+    
+responses:
+    utter_how_can_I_help:
+    - text: Welcome to CallMagos Chatbot. I can help you with resolving issues, finding best offers, account details, fetch details, and lot more!
+    utter_ask_account_number:
+    - text: Please tell me your account number
+    utter_send_account_details:
+    - text: The aacount details will be sent to your registered email and mobile number
+    utter_ask_issue:
+    - text: How may I assist you?
+    utter_ask_name:
+    - text: What is your name?
+    utter_ask_email:
+    - text: What is your email id?
+    utter_ask_mobile_number:
+    - text: what is your mobile number?
+    utter_send_offers:
+    - text: The best offers will be sent to your registered email and mobile number.
+    utter_goodbye:
+    - text: It was nice talking to you, Goodbye!
+
+actions:
+    - utter_how_can_I_help
+    - utter_ask_account_number
+    - utter_send_account_details
+    - utter_ask_issue
+    - utter_ask_name
+    - utter_ask_email
+    - utter_ask_mobile_number
+    - utter_send_offers
+    - utter_goodbye
+
+
